@@ -108,8 +108,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/MakovWait/godots.git",
-                    "tag": "v1.2.2.stable",
-                    "commit": "87e1288d2d1cdcda8897ea9a8b438a88b9aa3007"
+                    "tag": "v1.3.stable",
+                    "commit": "3e5782fa3892912659be283d74496fdb853044eb"
                 },
                 {
                     "type": "script",
