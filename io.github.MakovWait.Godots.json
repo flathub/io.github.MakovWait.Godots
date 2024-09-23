@@ -116,6 +116,10 @@
                     "path": "fix-appdata-for-linux.patch"
                 },
                 {
+                    "type": "patch",
+                    "path": "remove-1.2.2-release.patch"
+                },
+                {
                     "type": "script",
                     "dest-filename": "godots.sh",
                     "commands": [
