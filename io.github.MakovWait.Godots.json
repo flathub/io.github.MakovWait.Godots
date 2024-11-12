@@ -1,17 +1,17 @@
 {
     "id" : "io.github.MakovWait.Godots",
     "runtime" : "org.freedesktop.Sdk",
-    "runtime-version" : "23.08",
+    "runtime-version" : "24.08",
     "sdk" : "org.freedesktop.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.openjdk11",
-        "org.freedesktop.Sdk.Extension.dotnet7"
+        "org.freedesktop.Sdk.Extension.dotnet8"
     ],
     "command": "godots",
     "build-options": {
-        "append-path": "/usr/lib/sdk/dotnet7/bin",
-        "append-ld-library-path": "/usr/lib/sdk/dotnet7/lib",
-        "append-pkg-config-path": "/usr/lib/sdk/dotnet7/lib/pkgconfig"
+        "append-path": "/usr/lib/sdk/dotnet8/bin",
+        "append-ld-library-path": "/usr/lib/sdk/dotnet8/lib",
+        "append-pkg-config-path": "/usr/lib/sdk/dotnet8/lib/pkgconfig"
     },
     "finish-args" : [
         "--share=network",
@@ -48,8 +48,8 @@
             "name": "dotnet",
             "buildsystem": "simple",
             "build-commands": [
-                "/usr/lib/sdk/dotnet7/bin/install-sdk.sh",
-                "cp -r /usr/lib/sdk/dotnet7/lib/packs/ /app/lib/dotnet/"
+                "/usr/lib/sdk/dotnet8/bin/install-sdk.sh",
+                "cp -r /usr/lib/sdk/dotnet8/lib/packs/ /app/lib/dotnet/"
             ]
         },
         "shared-modules/glu/glu-9.json",
@@ -78,8 +78,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/godotengine/godot/releases/download/4.1.2-stable/godot-4.1.2-stable.tar.xz",
-                    "sha256": "41c9aedf1de788bd8e6c16bbb7a75411fde48023b54a8abbd936df47879d0108"
+                    "url": "https://github.com/godotengine/godot/releases/download/4.2.1-stable/godot-4.2.1-stable.tar.xz",
+                    "sha256": "be2d5b8333628e9135dd6fce992ebd16481b97e99d6facc2296411a7b7f72a62"
                 }
             ]
         },
@@ -87,10 +87,10 @@
             "name" : "Godots",
             "buildsystem" : "simple",
             "build-commands": [
-                "unzip Godot_v4.1.2-stable_export_templates.tpz",
+                "unzip Godot_v4.2.1-stable_export_templates.tpz",
                 "mkdir ./home",
-                "mkdir -p ./home/.local/share/godot/export_templates/4.1.2.stable",
-                "mv templates/* ./home/.local/share/godot/export_templates/4.1.2.stable",
+                "mkdir -p ./home/.local/share/godot/export_templates/4.2.1.stable",
+                "mv templates/* ./home/.local/share/godot/export_templates/4.2.1.stable",
                 "HOME=/run/build/Godots/home /app/bin/godot-bin --headless --export-release 'Linux/X11' ./godots-bin",
                 "desktop-file-edit --set-icon=$FLATPAK_ID packaging/linux/$FLATPAK_ID.desktop",
                 "install -D -m755 ./godots-bin /app/bin/godots-bin",
@@ -102,8 +102,8 @@
             "sources" : [
                 {
                     "type": "file",
-                    "url": "https://downloads.tuxfamily.org/godotengine/4.1.2/Godot_v4.1.2-stable_export_templates.tpz",
-                    "sha256": "8c8b6e02586a9de306230faa9d80cc009af14d8cbf113dafcbd5d770a8e2d10d"
+                    "url": "https://downloads.tuxfamily.org/godotengine/4.2.1/Godot_v4.2.1-stable_export_templates.tpz",
+                    "sha256": "c5f140eb578463a2fa1407f35e37c17aa34a4b847b9d30e29c3847b95e6dda07"
                 },
                 {
                     "type": "git",
