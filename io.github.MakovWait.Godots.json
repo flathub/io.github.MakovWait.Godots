@@ -78,8 +78,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/godotengine/godot/releases/download/4.2.1-stable/godot-4.2.1-stable.tar.xz",
-                    "sha256": "be2d5b8333628e9135dd6fce992ebd16481b97e99d6facc2296411a7b7f72a62"
+                    "url": "https://github.com/godotengine/godot/releases/download/4.5-stable/godot-4.5-stable.tar.xz",
+                    "sha256": "2cdb383d68bfe646c832064b9063310745e8db03a2e4b59f5946ee934b95c67d"
                 }
             ]
         },
@@ -87,10 +87,10 @@
             "name" : "Godots",
             "buildsystem" : "simple",
             "build-commands": [
-                "unzip Godot_v4.2.1-stable_export_templates.tpz",
+                "unzip Godot_v4.5-stable_export_templates.tpz",
                 "mkdir ./home",
-                "mkdir -p ./home/.local/share/godot/export_templates/4.2.1.stable",
-                "mv templates/* ./home/.local/share/godot/export_templates/4.2.1.stable",
+                "mkdir -p ./home/.local/share/godot/export_templates/4.5.stable",
+                "mv templates/* ./home/.local/share/godot/export_templates/4.5.stable",
                 "HOME=/run/build/Godots/home /app/bin/godot-bin --headless --export-release 'Linux/X11' ./godots-bin",
                 "desktop-file-edit --set-icon=$FLATPAK_ID packaging/linux/$FLATPAK_ID.desktop",
                 "install -D -m755 ./godots-bin /app/bin/godots-bin",
@@ -102,14 +102,14 @@
             "sources" : [
                 {
                     "type": "file",
-                    "url": "https://downloads.tuxfamily.org/godotengine/4.2.1/Godot_v4.2.1-stable_export_templates.tpz",
-                    "sha256": "c5f140eb578463a2fa1407f35e37c17aa34a4b847b9d30e29c3847b95e6dda07"
+                    "url": "https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_export_templates.tpz",
+                    "sha256": "375d83b661794f91746d2dec9b569a99d4d24f85a70c4ec0068aafb18b551d53"
                 },
                 {
                     "type": "git",
                     "url": "https://github.com/MakovWait/godots.git",
-                    "tag": "v1.3.stable",
-                    "commit": "3e5782fa3892912659be283d74496fdb853044eb"
+                    "tag": "v1.4.stable",
+                    "commit": "535e01e316cdd42608563893dadd080fc2c58ac8"
                 },
                 {
                     "type": "patch",
